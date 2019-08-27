@@ -1,6 +1,8 @@
+const { table, user, password } = require('./config.js');
+
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
-const sequelize = new Sequelize('OUTPUT', 'root', 'root', {
+const sequelize = new Sequelize(table, user, password, {
   host: 'localhost',
   dialect: 'mysql'
 });
